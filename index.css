@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+h1{
+    color: white;
+    font-size: 35px;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav{
+   text-align: center;
+}
+
+.img-size{
+   width: 350px;
+   height: 350px;
+   padding: 15px;
+  /*  */
+}
+
+#grid-container {
+    display:inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    row-gap: 32px;
+    column-gap: 32px ;
+    justify-content: start;
+  }
+
+ main{
+   text-align: center;
+ }
+
+ .img-size:hover{
+    animation: zoom 2s forwards;
+ }
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+        box-shadow: 0 2px 5 px #cccc;
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+} 
+
+/*put 3 cards for tablet screen and 2 cards for mobile screen*/
+  @media(max-width: 900px){
+    #grid-container {
+        display:inline-grid;
+        grid-template-columns: auto auto ;
+       
+      }
+  }
